@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Params, Router } from '@angular/router';
-import { BehaviorSubject, filter, Observable, switchMap } from 'rxjs';
+import { filter } from 'rxjs';
 
 
 
@@ -8,8 +8,6 @@ import { BehaviorSubject, filter, Observable, switchMap } from 'rxjs';
   providedIn: 'root'
 })
 export class RouterService {
-  // private routeParamsSubject = new BehaviorSubject<Params>({})
-  // routeParams$: Observable<Params> = this.routeParamsSubject.asObservable()
 
   private routeParams = signal<Params>({})
 
